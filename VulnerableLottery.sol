@@ -86,6 +86,10 @@ contract VulnerableLottery {
         emit Winner(winner, amount);
     }
 
+    // ---------------------------------------------------------------
+    // New Comment
+    // ---------------------------------------------------------------
+
     function luckyNumber() public view returns (uint256) {
         return uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender))) % 100; // predictable
     }
@@ -146,6 +150,10 @@ contract VulnerableLottery {
         highestBidder = msg.sender;
         highestBid = msg.value;
     }
+    
+    // ---------------------------------------------------------------
+    // New Comment
+    // ---------------------------------------------------------------
 
     receive() external payable {}
 }
